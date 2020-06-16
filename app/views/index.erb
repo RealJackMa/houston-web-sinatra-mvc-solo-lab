@@ -1,0 +1,16 @@
+<p> Here are all of our puppies: </p>
+<ul>
+<% @puppies.each do |puppy| %>
+    <a href="/puppies/<%= puppy.id %>">
+        <li> <%= puppy.name %> </li>
+   </a>
+<% end %>
+</ul>
+
+<form method="get" action="/puppies/new">
+    <button type="submit">Create a New Puppy!</button>
+</form>
+
+<form method="get" action="/home">
+    <button type="submit">Return to Home!</button>
+</form>
